@@ -28,14 +28,14 @@ int dont_try_to_fuck_with_god(int argc, char **argv)
     i = -1;
     if (argc != 3)
     {
-        printf("Are you trying to send me some BS son? Try again, you will be luckier(maybe)!\n");
+        ft_printf("Are you trying to send me some BS son? Try again, you will be luckier(maybe)!\n");
         return(0);
     }
     while(argv[1][++i])
     {
         if(!ft_isdigit(argv[1][i]))
         {
-            printf("God's pid it's composed by number. CAN YOU DO IT RIGHT SON?");
+            ft_printf("God's pid it's composed by number. CAN YOU DO IT RIGHT SON?");
             return(0);
         }
     }

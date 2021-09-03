@@ -4,6 +4,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "./libft/libft.h"
+# include "./Libraries/libft/libft.h"
+# include "./Libraries/ft_printf/ft_printf.h"
 
 # endif

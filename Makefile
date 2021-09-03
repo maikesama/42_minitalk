@@ -12,7 +12,7 @@ OBJS_C = ${SRCS_C:.c=.o}
 
 OBJS_S = ${SRCS_S:.c=.o}
 
-LIBS = -L./libft -lft
+LIBS = -L./Libraries/ft_printf -L./Libraries/libft -lftprintf -lft
 
 all: lib $(CLIENT) $(SERVER)
 
@@ -23,7 +23,8 @@ $(SERVER):$(OBJS_S)
 	$(CC) -o $(SERVER) $(OBJS_S) $(LIBS)
 
 lib:
-	make -C ./libft
+	make -C ./Libraries/libft
+	make -C ./Libraries/ft_printf
 
 clean: cleanclient cleanserver
 
@@ -34,7 +35,8 @@ cleanserver:
 	rm -f $(SERVER) $(OBJS_S)
 
 cleanlib:
-	make fclean -C ./libft
+	make fclean -C ./Libraries/libft
+	make fclean -C ./Libraries/ft_printf
 
 fclean: cleanclient cleanserver cleanlib
 

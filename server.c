@@ -22,15 +22,15 @@ void    god_hand(int wyw)
 
 int     main()
 {
-    printf("God pid is %d, send your prayer!\n", getpid());
+    ft_printf("God pid is %d, send your prayer!\n", getpid());
     if (signal(SIGUSR1, god_hand) == SIG_ERR)
     {
-        printf("Error.\n");
+        ft_printf("Error.\n");
         exit(1);
     }
     else if (signal(SIGUSR2, god_hand) == SIG_ERR)
     {
-        printf("Error.\n");
+        ft_printf("Error.\n");
         exit(1);
     }
     while(1);
